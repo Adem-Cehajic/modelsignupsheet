@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sign up sheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                height: 100vh;
+                background-image: url(trees.jpg);
+                background-repeat: no-repeat;
+                background-size: 100vw 100vh;
+                display: flex;
+            }
+            .left {
+                flex: .4 1 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .left h2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: aliceblue;
+                height: 20vh;
+                width: 40vw;
+                background-color: rgb(0, 0, 0, .9);
+
+            }
+            .right {
+                flex: 1 1 0;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                color: aliceblue;
+                align-items: center;
+            }
+            form {
+                display: flex;
+                gap: 1%;
+            }
+            h1 {
+                padding: 2%;
+            }
+            form div{
+                display: flex;
+                flex-direction: column;
+                gap: inherit;
+            }
+            button {
+                border-radius: 25px;
+                background-color: green;
+                color: aliceblue;
+                margin: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="left"><h2>Odin Sign up</h2></div>
+        <div class="right">
+            <h1>Sign up here</h1>
+            <form action id="form">
+                <div class="fleft">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" pattern="[A-Za-z]+" required>
+                    <label for="surname">Last Name</label>
+                    <input type="text" id="surname" pattern="[A-Za-z]+" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="fright">
+                    <label for="number">Phone Number</label>
+                    <input type="int" id="number" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <label for="newpassword">Confirm Password</label>
+                    <input type="password" id="newpassword" required>
+                </div>
+            </form>
+            <button type="submit" form="form">Create Account</button>
+        </div>
+        
+    </body>
+</html>
